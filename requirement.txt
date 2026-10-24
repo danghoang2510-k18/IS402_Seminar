@@ -1,0 +1,5 @@
+# Azure VM Ubuntu 24.04 / Python 3.10+
+pyarrow>=14.0.0
+fsspec>=2024.2.0
+huggingface_hub>=0.25.0
+azure-iot-device>=2.11.0

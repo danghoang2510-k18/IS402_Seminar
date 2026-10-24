@@ -1,0 +1,289 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.61\",\"type\":2}},\"activeSectionIndex\":1,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "b5398102e9ba6abddeca",
+      "config": "{}",
+      "name": "3b205e4d261c3dceeb83"
+    }
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Sensor Analysis",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "20b94f4f265b98aab5af",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1aded680a2f1e4cf25f8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":468.75,\"z\":6000,\"width\":998.75,\"height\":251.25,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Trends.WindowEndTime\"},{\"queryRef\":\"Trends.MachineId\"},{\"queryRef\":\"Trends.SensorType\"},{\"queryRef\":\"Trends.SensorUnit\"},{\"queryRef\":\"Sum(Trends.ReadingCount)\"},{\"queryRef\":\"Trends.MinValue\"},{\"queryRef\":\"Sum(Trends.MaxValue)\"},{\"queryRef\":\"Sum(Trends.AvgValue)\"},{\"queryRef\":\"Sum(Trends.LowCount)\"},{\"queryRef\":\"Sum(Trends.HighCount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Trends\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"MachineId\"},\"Name\":\"Trends.MachineId\",\"NativeReferenceName\":\"MachineId\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"SensorType\"},\"Name\":\"Trends.SensorType\",\"NativeReferenceName\":\"SensorType\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"SensorUnit\"},\"Name\":\"Trends.SensorUnit\",\"NativeReferenceName\":\"SensorUnit\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"ReadingCount\"},\"Name\":\"Sum(Trends.ReadingCount)\",\"NativeReferenceName\":\"ReadingCount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"MinValue\"},\"Name\":\"Trends.MinValue\",\"NativeReferenceName\":\"MinValue\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"MaxValue\"},\"Name\":\"Sum(Trends.MaxValue)\",\"NativeReferenceName\":\"MaxValue\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"AvgValue\"},\"Name\":\"Sum(Trends.AvgValue)\",\"NativeReferenceName\":\"AvgValue\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"LowCount\"},\"Name\":\"Sum(Trends.LowCount)\",\"NativeReferenceName\":\"LowCount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"HighCount\"},\"Name\":\"Sum(Trends.HighCount)\",\"NativeReferenceName\":\"HighCount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"WindowEndTime\"},\"Name\":\"Trends.WindowEndTime\",\"NativeReferenceName\":\"WindowEndTime\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"LowCount\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Minimal'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 251.25,
+          "width": 998.75,
+          "x": 0.00,
+          "y": 468.75,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"210f5cfb29954db92035\",\"layouts\":[{\"id\":0,\"position\":{\"x\":870,\"y\":53.75,\"z\":3000,\"width\":410,\"height\":113.75,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Trends.Readings Above\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Trends\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Readings Above\"},\"Name\":\"Trends.Readings Above\",\"NativeReferenceName\":\"Readings Above\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Readings Above\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 113.75,
+          "width": 410.00,
+          "x": 870.00,
+          "y": 53.75,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"99ef3879ada67005d281\",\"layouts\":[{\"id\":0,\"position\":{\"x\":107.5,\"y\":53.75,\"z\":1000,\"width\":141.25,\"height\":113.75,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Trends.Avg Sensor Value\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Trends\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Avg Sensor Value\"},\"Name\":\"Trends.Avg Sensor Value\",\"NativeReferenceName\":\"Avg Sensor Value\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Avg Sensor Value\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 113.75,
+          "width": 141.25,
+          "x": 107.50,
+          "y": 53.75,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"9a9c27c2fbb18c25fdd8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":977.5,\"y\":167.5,\"z\":5000,\"width\":302.5,\"height\":301.25,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Trends.MachineId\",\"active\":true}],\"Y\":[{\"queryRef\":\"Trends.Sensor Violation Rate\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Trends\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"MachineId\"},\"Name\":\"Trends.MachineId\",\"NativeReferenceName\":\"MachineId\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Sensor Violation Rate\"},\"Name\":\"Trends.Sensor Violation Rate\",\"NativeReferenceName\":\"Sensor Violation Rate\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Sensor Violation Rate\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 301.25,
+          "width": 302.50,
+          "x": 977.50,
+          "y": 167.50,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"a46ea757bd9eef6bdff4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280,\"height\":53.75,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Sensor Analysis\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"24pt\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 53.75,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"e343b2400a8e4375fae9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1021.25,\"y\":468.75,\"z\":7000,\"width\":215,\"height\":251.25,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Trends.SensorType\",\"active\":true},{\"queryRef\":\"Trends.MachineId\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Trends\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"SensorType\"},\"Name\":\"Trends.SensorType\",\"NativeReferenceName\":\"SensorType\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"MachineId\"},\"Name\":\"Trends.MachineId\",\"NativeReferenceName\":\"MachineId\"}]},\"expansionStates\":[{\"roles\":[\"Values\"],\"levels\":[{\"queryRefs\":[\"Trends.SensorType\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Trends\"}},\"Property\":\"SensorType\"}}],\"isPinned\":true},{\"queryRefs\":[\"Trends.MachineId\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Trends\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"SensorType\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'humidity'\"}}]]}}}]}}}}],\"selection\":[{\"properties\":{\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"cachedFilterDisplayItems\":[{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Trends\"}},\"Property\":\"SensorType\"}},\"Right\":{\"Literal\":{\"Value\":\"'humidity'\"}}}}},\"displayName\":\"humidity\"}]}}",
+          "filters": "[{\"name\":\"127d28e133a2c5580879\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Trends\"}},\"Property\":\"SensorType\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Trends\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"SensorType\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"null\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 251.25,
+          "width": 215.00,
+          "x": 1021.25,
+          "y": 468.75,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"e3e6977585632187fb25\",\"layouts\":[{\"id\":0,\"position\":{\"x\":451.25,\"y\":53.75,\"z\":2000,\"width\":418.75,\"height\":113.75,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Trends.Readings Below\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Trends\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Readings Below\"},\"Name\":\"Trends.Readings Below\",\"NativeReferenceName\":\"Readings Below\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Readings Below\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 113.75,
+          "width": 418.75,
+          "x": 451.25,
+          "y": 53.75,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"f8275d00224024df4553\",\"layouts\":[{\"id\":0,\"position\":{\"x\":316.25,\"y\":53.75,\"z\":8000,\"width\":172.5,\"height\":113.75,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Trends.Selected Sensor Unit\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Trends\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Selected Sensor Unit\"},\"Name\":\"Trends.Selected Sensor Unit\",\"NativeReferenceName\":\"Sensor Unit\"}]},\"columnProperties\":{\"Trends.Selected Sensor Unit\":{\"displayName\":\"Sensor Unit\"}},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 113.75,
+          "width": 172.50,
+          "x": 316.25,
+          "y": 53.75,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"fe0157fa375e02e31c36\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":167.5,\"z\":4000,\"width\":977.5,\"height\":301.25,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Trends.WindowEndTime\",\"active\":true}],\"Y\":[{\"queryRef\":\"Trends.Avg Sensor Value\"},{\"queryRef\":\"Trends.Max Sensor Value\"},{\"queryRef\":\"Trends.Min Sensor Value\"},{\"queryRef\":\"Trends.Upper Sensor Threshold\"},{\"queryRef\":\"Trends.Lower Sensor Threshold\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Trends\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"WindowEndTime\"},\"Name\":\"Trends.WindowEndTime\",\"NativeReferenceName\":\"WindowEndTime\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Avg Sensor Value\"},\"Name\":\"Trends.Avg Sensor Value\",\"NativeReferenceName\":\"Avg Sensor Value\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Max Sensor Value\"},\"Name\":\"Trends.Max Sensor Value\",\"NativeReferenceName\":\"Max Sensor Value\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Min Sensor Value\"},\"Name\":\"Trends.Min Sensor Value\",\"NativeReferenceName\":\"Min Sensor Value\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Upper Sensor Threshold\"},\"Name\":\"Trends.Upper Sensor Threshold\",\"NativeReferenceName\":\"Upper Sensor Threshold\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Lower Sensor Threshold\"},\"Name\":\"Trends.Lower Sensor Threshold\",\"NativeReferenceName\":\"Lower Sensor Threshold\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"WindowEndTime\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"legend\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'BottomCenter'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Sensor Values vs Thresholds'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 301.25,
+          "width": 977.50,
+          "x": 0.00,
+          "y": 167.50,
+          "z": 4000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Alert Monitoring",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "67b74e0df78e7bcf5ae2",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0b0c35673f25597b605b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":321.1111111111111,\"y\":440,\"z\":6000,\"width\":958.8888888888889,\"height\":278.88888888888886,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Alerts.AlertTriggerTime\"},{\"queryRef\":\"Alerts.MachineId\"},{\"queryRef\":\"Alerts.SensorType\"},{\"queryRef\":\"Alerts.AlertDirection\"},{\"queryRef\":\"Alerts.MinValue\"},{\"queryRef\":\"Sum(Alerts.MaxValue)\"},{\"queryRef\":\"Sum(Alerts.AvgValue)\"},{\"queryRef\":\"Sum(Alerts.LowerThreshold)\"},{\"queryRef\":\"Sum(Alerts.UpperThreshold)\"},{\"queryRef\":\"Alerts.Severity\"},{\"queryRef\":\"Alerts.Violations\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Alerts\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"AlertTriggerTime\"},\"Name\":\"Alerts.AlertTriggerTime\",\"NativeReferenceName\":\"AlertTriggerTime\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"MachineId\"},\"Name\":\"Alerts.MachineId\",\"NativeReferenceName\":\"MachineId\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"SensorType\"},\"Name\":\"Alerts.SensorType\",\"NativeReferenceName\":\"SensorType\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"AlertDirection\"},\"Name\":\"Alerts.AlertDirection\",\"NativeReferenceName\":\"AlertDirection\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Severity\"},\"Name\":\"Alerts.Severity\",\"NativeReferenceName\":\"Severity\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Violations\"},\"Name\":\"Alerts.Violations\",\"NativeReferenceName\":\"Violations\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"MinValue\"},\"Name\":\"Alerts.MinValue\",\"NativeReferenceName\":\"MinValue\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"MaxValue\"},\"Name\":\"Sum(Alerts.MaxValue)\",\"NativeReferenceName\":\"MaxValue\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"AvgValue\"},\"Name\":\"Sum(Alerts.AvgValue)\",\"NativeReferenceName\":\"AvgValue\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"UpperThreshold\"},\"Name\":\"Sum(Alerts.UpperThreshold)\",\"NativeReferenceName\":\"UpperThreshold\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"LowerThreshold\"},\"Name\":\"Sum(Alerts.LowerThreshold)\",\"NativeReferenceName\":\"LowerThreshold\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"AlertTriggerTime\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"values\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"Conditional\":{\"Cases\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Alerts\"}},\"Property\":\"Severity\"}},\"Function\":3}},\"Right\":{\"Literal\":{\"Value\":\"'Critical'\"}}},\"Annotations\":{\"PowerBI.SQExprEvaluationKind\":1,\"PowerBI.SQExprTextOperatorOption\":2}},\"Value\":{\"Literal\":{\"Value\":\"'#FF0000'\"}}},{\"Condition\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Alerts\"}},\"Property\":\"Severity\"}},\"Function\":3}},\"Right\":{\"Literal\":{\"Value\":\"'Warning'\"}}},\"Annotations\":{\"PowerBI.SQExprEvaluationKind\":1,\"PowerBI.SQExprTextOperatorOption\":2}},\"Value\":{\"Literal\":{\"Value\":\"'#e1c233'\"}}}]}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}],\"metadata\":\"Alerts.Severity\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Recent Alerts Table'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}}}],\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Minimal'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 278.89,
+          "width": 958.89,
+          "x": 321.11,
+          "y": 440.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"3227aa571078a54b8de5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":948.8888888888889,\"y\":207.77777777777777,\"z\":7000,\"width\":331.1111111111111,\"height\":232.22222222222223,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Alerts.MachineId\",\"active\":true},{\"queryRef\":\"Alerts.SensorType\"},{\"queryRef\":\"Alerts.Severity\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Alerts\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"MachineId\"},\"Name\":\"Alerts.MachineId\",\"NativeReferenceName\":\"MachineId\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"SensorType\"},\"Name\":\"Alerts.SensorType\",\"NativeReferenceName\":\"SensorType\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Severity\"},\"Name\":\"Alerts.Severity\",\"NativeReferenceName\":\"Severity\"}]},\"expansionStates\":[{\"roles\":[\"Values\"],\"levels\":[{\"queryRefs\":[\"Alerts.MachineId\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Alerts\"}},\"Property\":\"MachineId\"}}],\"isPinned\":true},{\"queryRefs\":[\"Alerts.SensorType\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Alerts\"}},\"Property\":\"SensorType\"}}],\"isPinned\":true},{\"queryRefs\":[\"Alerts.Severity\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"selection\":[{\"properties\":{\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"header\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Slicer MachineId, SensorType và Severity'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 232.22,
+          "width": 331.11,
+          "x": 948.89,
+          "y": 207.78,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"5e7dc5a65aa9af5a5e22\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":8000,\"width\":1280,\"height\":53.75,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Alert Monitoring\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"24pt\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 53.75,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"6e81690ec4125e71c048\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":178.88888888888889,\"z\":5000,\"width\":602.2222222222222,\"height\":261.1111111111111,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Alerts.AlertTriggerTime\",\"active\":true}],\"Y\":[{\"queryRef\":\"Alerts.Alert Records\"}],\"Series\":[{\"queryRef\":\"Alerts.Severity\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Alerts\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"AlertTriggerTime\"},\"Name\":\"Alerts.AlertTriggerTime\",\"NativeReferenceName\":\"AlertTriggerTime\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Alert Records\"},\"Name\":\"Alerts.Alert Records\",\"NativeReferenceName\":\"Alert Records\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Severity\"},\"Name\":\"Alerts.Severity\",\"NativeReferenceName\":\"Severity\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"AlertTriggerTime\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"legend\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'BottomCenter'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Alert Trend theo thời gian'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 261.11,
+          "width": 602.22,
+          "x": 0.00,
+          "y": 178.89,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"b5f15ef14a09da891661\",\"layouts\":[{\"id\":0,\"position\":{\"x\":602.2222222222222,\"y\":178.88888888888889,\"z\":4000,\"width\":346.6666666666667,\"height\":261.1111111111111,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Alerts.Alert Records\"}],\"Category\":[{\"queryRef\":\"Alerts.Severity\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Alerts\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Alert Records\"},\"Name\":\"Alerts.Alert Records\",\"NativeReferenceName\":\"Alert Records\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Severity\"},\"Name\":\"Alerts.Severity\",\"NativeReferenceName\":\"Severity\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Alert Records\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"legend\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'BottomCenter'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Severity Distribution'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 261.11,
+          "width": 346.67,
+          "x": 602.22,
+          "y": 178.89,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"db9553a947e42bfcea3d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":405.55555555555554,\"y\":63.33333333333333,\"z\":2000,\"width\":452.22222222222223,\"height\":115.55555555555556,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Alerts.Critical Alerts\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Alerts\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Critical Alerts\"},\"Name\":\"Alerts.Critical Alerts\",\"NativeReferenceName\":\"Critical Alerts\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Critical Alerts\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 115.56,
+          "width": 452.22,
+          "x": 405.56,
+          "y": 63.33,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"e38448e03149b8276719\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":63.33333333333333,\"z\":1000,\"width\":405.55555555555554,\"height\":115.55555555555556,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Alerts.Alert Records\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Alerts\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Alert Records\"},\"Name\":\"Alerts.Alert Records\",\"NativeReferenceName\":\"Alert Records\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Alert Records\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 115.56,
+          "width": 405.56,
+          "x": 0.00,
+          "y": 63.33,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"f05ee00d29a3c7ae5031\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":440,\"z\":0,\"width\":342.22222222222223,\"height\":280,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Alerts.Alert Records\"}],\"Category\":[{\"queryRef\":\"Alerts.SensorType\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Alerts\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Alert Records\"},\"Name\":\"Alerts.Alert Records\",\"NativeReferenceName\":\"Alert Records\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"SensorType\"},\"Name\":\"Alerts.SensorType\",\"NativeReferenceName\":\"SensorType\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Alert Records\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Alerts by Sensor'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 280.00,
+          "width": 342.22,
+          "x": 0.00,
+          "y": 440.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"fb9e9367dd5e97ad5f05\",\"layouts\":[{\"id\":0,\"position\":{\"x\":857.7777777777777,\"y\":63.33333333333333,\"z\":3000,\"width\":422.22222222222223,\"height\":115.55555555555556,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Alerts.Warning Alerts\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Alerts\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Warning Alerts\"},\"Name\":\"Alerts.Warning Alerts\",\"NativeReferenceName\":\"Warning Alerts\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Warning Alerts\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 115.56,
+          "width": 422.22,
+          "x": 857.78,
+          "y": 63.33,
+          "z": 3000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Production Overview",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "b5398102e9ba6abddeca",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"56fac11758846745f704\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":520,\"z\":5000,\"width\":1113.75,\"height\":200,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Alerts.AlertTriggerTime\"},{\"queryRef\":\"Alerts.MachineId\"},{\"queryRef\":\"Trends.SensorUnit\"},{\"queryRef\":\"Sum(Alerts.AvgValue)\"},{\"queryRef\":\"Alerts.SensorType\"},{\"queryRef\":\"Alerts.AlertDirection\"},{\"queryRef\":\"Alerts.Severity\"},{\"queryRef\":\"Alerts.ErrorDescription\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Alerts\",\"Type\":0},{\"Name\":\"t\",\"Entity\":\"Trends\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"MachineId\"},\"Name\":\"Alerts.MachineId\",\"NativeReferenceName\":\"MachineId\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"SensorType\"},\"Name\":\"Alerts.SensorType\",\"NativeReferenceName\":\"SensorType\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"AlertDirection\"},\"Name\":\"Alerts.AlertDirection\",\"NativeReferenceName\":\"AlertDirection\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Severity\"},\"Name\":\"Alerts.Severity\",\"NativeReferenceName\":\"Severity\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"ErrorDescription\"},\"Name\":\"Alerts.ErrorDescription\",\"NativeReferenceName\":\"ErrorDescription\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"AlertTriggerTime\"},\"Name\":\"Alerts.AlertTriggerTime\",\"NativeReferenceName\":\"AlertTriggerTime\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"SensorUnit\"},\"Name\":\"Trends.SensorUnit\",\"NativeReferenceName\":\"SensorUnit\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"AvgValue\"},\"Name\":\"Sum(Alerts.AvgValue)\",\"NativeReferenceName\":\"AvgValue\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"ErrorDescription\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"175.57143026614355D\"}}}},\"selector\":{\"metadata\":\"Alerts.AlertTriggerTime\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"115.1364916961923D\"}}}},\"selector\":{\"metadata\":\"Alerts.MachineId\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"114.50003383210708D\"}}}},\"selector\":{\"metadata\":\"Alerts.SensorType\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"129.83191848585986D\"}}}},\"selector\":{\"metadata\":\"Alerts.AlertDirection\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"108.42853996041131D\"}}}},\"selector\":{\"metadata\":\"Alerts.Severity\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"208.59439120441664D\"}}}},\"selector\":{\"metadata\":\"Alerts.ErrorDescription\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"102.24998398770256D\"}}}},\"selector\":{\"metadata\":\"Sum(Alerts.AvgValue)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"122.74999558227084D\"}}}},\"selector\":{\"metadata\":\"Trends.SensorUnit\"}}],\"columnHeaders\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Left'\"}}}}}],\"values\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"Conditional\":{\"Cases\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Alerts\"}},\"Property\":\"Severity\"}},\"Function\":3}},\"Right\":{\"Literal\":{\"Value\":\"'Warning'\"}}},\"Annotations\":{\"PowerBI.SQExprEvaluationKind\":1,\"PowerBI.SQExprTextOperatorOption\":2}},\"Value\":{\"Literal\":{\"Value\":\"'#e1c233'\"}}},{\"Condition\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Alerts\"}},\"Property\":\"Severity\"}},\"Function\":3}},\"Right\":{\"Literal\":{\"Value\":\"'Critical'\"}}},\"Annotations\":{\"PowerBI.SQExprEvaluationKind\":1,\"PowerBI.SQExprTextOperatorOption\":2}},\"Value\":{\"Literal\":{\"Value\":\"'#FF0000'\"}}}]}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}],\"metadata\":\"Alerts.Severity\"}}]},\"vcObjects\":{\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Minimal'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 200.00,
+          "width": 1113.75,
+          "x": 0.00,
+          "y": 520.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"5b3b9b8408e87911d9a6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":428.75,\"y\":53.75,\"z\":1000,\"width\":412.5,\"height\":107.5,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Alerts.Total Alerts\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Alerts\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Alert Records\"},\"Name\":\"Alerts.Total Alerts\",\"NativeReferenceName\":\"Alert Records\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Alert Records\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 107.50,
+          "width": 412.50,
+          "x": 428.75,
+          "y": 53.75,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"7a7bc7d4d5debf3b3c09\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":53.75,\"z\":0,\"width\":428.75,\"height\":107.5,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Alerts.Total Readings\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Alerts\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Total Readings\"},\"Name\":\"Alerts.Total Readings\",\"NativeReferenceName\":\"Total Readings\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Total Readings\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 107.50,
+          "width": 428.75,
+          "x": 0.00,
+          "y": 53.75,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"91601ab9cd90fa59e250\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":161.25,\"z\":3000,\"width\":1280,\"height\":358.75,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(Trends.AvgValue)\"},{\"queryRef\":\"CountNonNull(Trends.MinValue)\"},{\"queryRef\":\"Avg(Trends.MaxValue)\"}],\"Category\":[{\"queryRef\":\"Trends.WindowEndTime\",\"active\":true}],\"Tooltips\":[{\"queryRef\":\"Min(Trends.SensorUnit)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Trends\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"AvgValue\"}},\"Function\":1},\"Name\":\"Sum(Trends.AvgValue)\",\"NativeReferenceName\":\"AvgValue\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"MinValue\"}},\"Function\":1},\"Name\":\"CountNonNull(Trends.MinValue)\",\"NativeReferenceName\":\"MinValue\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"MaxValue\"}},\"Function\":1},\"Name\":\"Avg(Trends.MaxValue)\",\"NativeReferenceName\":\"MaxValue\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"WindowEndTime\"},\"Name\":\"Trends.WindowEndTime\",\"NativeReferenceName\":\"WindowEndTime\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"SensorUnit\"}},\"Function\":3},\"Name\":\"Min(Trends.SensorUnit)\",\"NativeReferenceName\":\"First SensorUnit\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"WindowEndTime\"}}}]},\"columnProperties\":{\"Sum(Trends.AvgValue)\":{\"displayName\":\"AvgValue\"},\"CountNonNull(Trends.MinValue)\":{\"displayName\":\"MinValue\"},\"Avg(Trends.MaxValue)\":{\"displayName\":\"MaxValue\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"seriesLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"zoom\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'BottomCenter'\"}}},\"showTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"''\"}}}}}],\"valueAxis\":[{\"properties\":{\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"'Sensor Trend Over Time'\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Sensor Trend — Min / Avg / Max'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 358.75,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 161.25,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"b64a438f5bbc3eb96f7a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1113.75,\"y\":520,\"z\":4000,\"width\":166.25,\"height\":200,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Trends.SensorType\",\"active\":true},{\"queryRef\":\"Trends.MachineId\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Trends\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"SensorType\"},\"Name\":\"Trends.SensorType\",\"NativeReferenceName\":\"SensorType\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"MachineId\"},\"Name\":\"Trends.MachineId\",\"NativeReferenceName\":\"MachineId\"}]},\"expansionStates\":[{\"roles\":[\"Values\"],\"levels\":[{\"queryRefs\":[\"Trends.SensorType\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Trends\"}},\"Property\":\"SensorType\"}}],\"isPinned\":true},{\"queryRefs\":[\"Trends.MachineId\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Trends\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"SensorType\"}},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"MachineId\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'humidity'\"}},{\"Literal\":{\"Value\":\"'SIM-01'\"}}]]}}}]}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"selection\":[{\"properties\":{\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"filterExpressionMetadata\":{\"expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Trends\"}},\"Property\":\"SensorType\"}},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Trends\"}},\"Property\":\"MachineId\"}}],\"cachedValueItems\":[{\"identities\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Trends\"}},\"Property\":\"SensorType\"}},\"Right\":{\"Literal\":{\"Value\":\"'humidity'\"}}}}},{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Trends\"}},\"Property\":\"MachineId\"}},\"Right\":{\"Literal\":{\"Value\":\"'SIM-01'\"}}}}}],\"valueMap\":{\"0\":\"humidity\",\"1\":\"SIM-01\"}}]}}}",
+          "filters": "[{\"name\":\"8d22df4558e029adea61\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Trends\"}},\"Property\":\"SensorType\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Trends\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"SensorType\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"null\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 200.00,
+          "width": 166.25,
+          "x": 1113.75,
+          "y": 520.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"cfe0084a2bca88dcd904\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":6000,\"width\":1280,\"height\":53.75,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Manufacturing IoT Monitoring\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"24pt\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 53.75,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"da20d18cd64f093ac2ce\",\"layouts\":[{\"id\":0,\"position\":{\"x\":841.25,\"y\":53.75,\"z\":2000,\"width\":438.75,\"height\":107.5,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Trends.Total Machines\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Trends\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Total Machines\"},\"Name\":\"Trends.Total Machines\",\"NativeReferenceName\":\"Total Machines\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Total Machines\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 107.50,
+          "width": 438.75,
+          "x": 841.25,
+          "y": 53.75,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

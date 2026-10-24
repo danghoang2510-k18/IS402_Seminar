@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# VS Code: chỉ bỏ qua thiết lập cá nhân
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Power BI
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+
+# Python temporary files
+.pytest_cache/
+.ipynb_checkpoints/
+*.log
+
+# Data files and unnecessary files
+*.parquet
+simulate_iot.py
+test_simulate_iot.py
+SAquerry.sql

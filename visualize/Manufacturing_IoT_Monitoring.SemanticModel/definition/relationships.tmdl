@@ -1,0 +1,24 @@
+relationship 82ebe615-487e-4c0c-bcf5-32cbfea29055
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Trends.WindowStartTime
+	toColumn: LocalDateTable_a96b4f9d-9e86-4de0-abbc-cd220edd07f7.Date
+
+relationship 36bea04e-6d33-4dd4-a031-786aa08b922d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Trends.WindowEndTime
+	toColumn: LocalDateTable_01c84e34-e333-404c-993b-3a819e279b25.Date
+
+relationship 0eac2d8f-d3eb-4aed-8180-6080e307dd5c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Alerts.WindowStartTime
+	toColumn: LocalDateTable_fd3892f4-7717-48ed-91e4-b2962b470372.Date
+
+relationship 03f177dc-4f4f-4c89-8409-00d8ba792102
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Alerts.AlertTriggerTime
+	toColumn: LocalDateTable_49f15a31-3df8-4052-ab71-41210c27bf76.Date
+
+relationship AutoDetected_4b5febf2-d8a5-4791-9fcf-e6c1b192f4d8
+	fromColumn: Alerts.MinValue
+	toColumn: Trends.MinValue
+

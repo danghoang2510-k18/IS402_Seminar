@@ -1,0 +1,26 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.140.1577.0 (25.02)+00af0910c5ca19a229c472b0dfc17a2c488f6b0a
+
+annotation PBI_QueryOrder = ["Trends","Alerts"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Trends
+ref table DateTableTemplate_e8b2e0ea-5a3c-40f6-8098-968d57d52b06
+ref table LocalDateTable_a96b4f9d-9e86-4de0-abbc-cd220edd07f7
+ref table LocalDateTable_01c84e34-e333-404c-993b-3a819e279b25
+ref table Alerts
+ref table LocalDateTable_fd3892f4-7717-48ed-91e4-b2962b470372
+ref table LocalDateTable_49f15a31-3df8-4052-ab71-41210c27bf76
+
+ref cultureInfo en-US
+

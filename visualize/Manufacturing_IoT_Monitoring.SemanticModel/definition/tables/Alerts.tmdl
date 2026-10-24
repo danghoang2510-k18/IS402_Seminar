@@ -1,0 +1,257 @@
+table Alerts
+	lineageTag: 7c1d3dd5-f5ee-451a-8aa0-89a153badc36
+
+	measure 'Total Readings' =
+			
+			SUM(Trends[ReadingCount])
+		formatString: 0
+		lineageTag: 5cf0fc9c-2915-4ea4-94c1-304b09084378
+
+	measure 'Alert Records' =
+			
+			COUNTROWS(Alerts)
+		formatString: 0
+		lineageTag: 7e30333d-eb95-4be7-9b4d-d500a94b37be
+
+	measure 'Critical Alerts' =
+			
+			CALCULATE(
+			    COUNTROWS(Alerts),
+			    Alerts[Severity] = "Critical"
+			)
+		formatString: 0
+		lineageTag: 81a6118e-53c9-48c5-ab04-966e4d97a061
+
+	measure 'Warning Alerts' =
+			
+			CALCULATE(
+			    COUNTROWS(Alerts),
+			    Alerts[Severity] = "Warning"
+			)
+		formatString: 0
+		lineageTag: 40eb0d4a-877f-452c-9325-5d997e31e3eb
+
+	measure 'Critical Rate' =
+			
+			DIVIDE([Critical Alerts], [Alert Records], 0)
+		lineageTag: 74ae9413-f8ae-496e-9cc4-467f4ef3276d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Average Violation Rate' =
+			
+			DIVIDE(
+			    SUM(Alerts[OutOfRangeCount]),
+			    SUM(Alerts[ReadingCount]),
+			    0
+			)
+		lineageTag: 50fe09e1-aaab-4a34-a336-af1c85b58f3c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MachineId
+		dataType: string
+		lineageTag: 2725a75e-e84c-4958-a5eb-fe24ebea12e1
+		summarizeBy: none
+		sourceColumn: MachineId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductionLine
+		dataType: string
+		lineageTag: e2556dca-fecd-4898-afb6-64335bdb3205
+		summarizeBy: none
+		sourceColumn: ProductionLine
+
+		annotation SummarizationSetBy = Automatic
+
+	column SensorType
+		dataType: string
+		lineageTag: 938830e6-6e7d-4bcc-832f-8425487540dc
+		summarizeBy: none
+		sourceColumn: SensorType
+
+		annotation SummarizationSetBy = Automatic
+
+	column SensorUnit
+		dataType: string
+		lineageTag: 64b5c87f-d83a-4c8b-9bd4-1dfa9a8f8b4a
+		summarizeBy: none
+		sourceColumn: SensorUnit
+
+		annotation SummarizationSetBy = Automatic
+
+	column WindowStartTime
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3a40be1b-674e-41db-8135-c8a6b6a5fb19
+		summarizeBy: none
+		sourceColumn: WindowStartTime
+
+		variation Variation
+			isDefault
+			relationship: 0eac2d8f-d3eb-4aed-8180-6080e307dd5c
+			defaultHierarchy: LocalDateTable_fd3892f4-7717-48ed-91e4-b2962b470372.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReadingCount
+		dataType: int64
+		formatString: 0
+		lineageTag: e9adbb28-8069-40e6-bf0f-e3269f388cb0
+		summarizeBy: sum
+		sourceColumn: ReadingCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column MinValue
+		dataType: double
+		lineageTag: d3478902-39d8-4012-96b8-9398997a9830
+		summarizeBy: none
+		sourceColumn: MinValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AvgValue
+		dataType: double
+		lineageTag: 7791f629-0c92-497b-98ab-6493eed47471
+		summarizeBy: sum
+		sourceColumn: AvgValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MaxValue
+		dataType: double
+		lineageTag: 2a888af8-239e-4342-9f4a-ec85c4d2f572
+		summarizeBy: sum
+		sourceColumn: MaxValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LowerThreshold
+		dataType: double
+		lineageTag: 663437dc-5591-48af-b863-4ab4da5a6db7
+		summarizeBy: sum
+		sourceColumn: LowerThreshold
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UpperThreshold
+		dataType: double
+		lineageTag: a5969699-265e-4543-ae32-8bbf6bbf972b
+		summarizeBy: sum
+		sourceColumn: UpperThreshold
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LowCount
+		dataType: int64
+		formatString: 0
+		lineageTag: f598dd90-875a-41e6-bd9e-3fd1643fef9d
+		summarizeBy: sum
+		sourceColumn: LowCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column HighCount
+		dataType: int64
+		formatString: 0
+		lineageTag: de54bcea-7420-44fe-ad60-e1701c4b4162
+		summarizeBy: sum
+		sourceColumn: HighCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column SourceAnomalyCount
+		dataType: int64
+		formatString: 0
+		lineageTag: 81f51f69-000b-4782-9c22-4f07dd297d63
+		summarizeBy: sum
+		sourceColumn: SourceAnomalyCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column AlertTriggerTime
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: cc878923-bddf-4368-96e7-b46088c9115c
+		summarizeBy: none
+		sourceColumn: AlertTriggerTime
+
+		variation Variation
+			isDefault
+			relationship: 03f177dc-4f4f-4c89-8409-00d8ba792102
+			defaultHierarchy: LocalDateTable_49f15a31-3df8-4052-ab71-41210c27bf76.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column OutOfRangeCount
+		dataType: int64
+		formatString: 0
+		lineageTag: 2dc51976-f31c-491d-a6d4-5dc3f10a8a97
+		summarizeBy: sum
+		sourceColumn: OutOfRangeCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column AlertDirection
+		dataType: string
+		lineageTag: 12c5cce5-b1ca-4755-891f-d4d80ec939f7
+		summarizeBy: none
+		sourceColumn: AlertDirection
+
+		annotation SummarizationSetBy = Automatic
+
+	column Severity
+		dataType: string
+		lineageTag: fb5c62d0-7df1-4ae9-b657-9cd08651bfeb
+		summarizeBy: none
+		sourceColumn: Severity
+
+		annotation SummarizationSetBy = Automatic
+
+	column ErrorDescription
+		dataType: string
+		lineageTag: 27299bac-d934-4191-a1bd-b88b2151ca8b
+		summarizeBy: none
+		sourceColumn: ErrorDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	column Violations =
+			
+			FORMAT(Alerts[OutOfRangeCount], "0")
+			& " / " &
+			FORMAT(Alerts[ReadingCount], "0")
+		lineageTag: cb6b6ab6-3b06-4598-acf3-18fabc52db12
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Alerts = m
+		mode: import
+		source =
+				let
+				    FileContent = File.Contents("C:\Users\ACER\Downloads\Seminar_Cloud\alerts.json"),
+				    Lines = Lines.FromBinary(FileContent),
+				    NonEmpty = List.Select(Lines, each Text.Trim(_) <> ""),
+				    Records = List.Transform(NonEmpty, each Json.Document(_)),
+				    Result = Table.FromRecords(Records),
+				    #"Changed Type" = Table.TransformColumnTypes(Result,{{"MachineId", type text}, {"ProductionLine", type text}, {"SensorType", type text}, {"SensorUnit", type text}, {"WindowStartTime", type datetimezone}, {"ReadingCount", Int64.Type}, {"MinValue", type number}, {"AvgValue", type number}, {"MaxValue", type number}, {"LowerThreshold", type number}, {"UpperThreshold", type number}, {"LowCount", Int64.Type}, {"HighCount", Int64.Type}, {"SourceAnomalyCount", Int64.Type}, {"AlertTriggerTime", type datetimezone}, {"OutOfRangeCount", Int64.Type}, {"AlertDirection", type text}, {"Severity", type text}, {"ErrorDescription", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

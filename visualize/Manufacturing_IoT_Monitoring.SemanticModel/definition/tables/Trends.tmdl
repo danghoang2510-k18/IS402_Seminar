@@ -1,0 +1,247 @@
+table Trends
+	lineageTag: 2ae7e02a-1f95-411f-be02-5c6d11402675
+
+	measure 'Total Machines' =
+			
+			DISTINCTCOUNT(Trends[MachineId])
+		formatString: 0
+		lineageTag: e6e4b654-eee0-4854-949c-7b9d8b2f5a42
+
+	measure 'Avg Sensor Value' =
+			
+			DIVIDE(
+			    SUMX(
+			        Trends,
+			        Trends[AvgValue] * Trends[ReadingCount]
+			    ),
+			    SUM(Trends[ReadingCount])
+			)
+		lineageTag: fe31d9ac-f39e-47a4-9bfb-9c959dd2a70a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Min Sensor Value' =
+			
+			MIN(Trends[MinValue])
+		lineageTag: 5beae41f-bef3-4abc-aaa9-858c9bdb77fd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Max Sensor Value' =
+			
+			MAX(Trends[MaxValue])
+		lineageTag: 0706638e-1dca-4247-aa03-42ae71c36500
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Readings Below' =
+			
+			SUM(Trends[LowCount])
+		formatString: 0
+		lineageTag: aafec9e6-6bc4-4cdc-ac9b-0baa988080ba
+
+	measure 'Readings Above' =
+			
+			SUM(Trends[HighCount])
+		formatString: 0
+		lineageTag: e6c73855-181c-4143-9d92-38d2a5fffddc
+
+	measure 'Out of Range Readings' =
+			
+			[Readings Below] + [Readings Above]
+		formatString: 0
+		lineageTag: a8a176a2-2fa6-41ca-95c8-31f40a741575
+
+	measure 'Sensor Violation Rate' =
+			
+			DIVIDE(
+			    [Out of Range Readings],
+			    SUM(Trends[ReadingCount]),
+			    0
+			)
+		lineageTag: e4e23d2e-1bc8-4360-a252-2fbcbe506cca
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Lower Sensor Threshold' =
+			
+			SELECTEDVALUE(Trends[LowerThreshold])
+		lineageTag: 598d99a1-ff27-4b75-8903-8e463fd899fd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Upper Sensor Threshold' =
+			
+			SELECTEDVALUE(Trends[UpperThreshold])
+		lineageTag: 8671cbf1-c3d9-4663-81b7-f8dc99e5545b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Selected Sensor Unit' =
+			
+			SELECTEDVALUE(Trends[SensorUnit], "Select a sensor")
+		lineageTag: 73443081-a787-4acb-b2d7-1b73e28f2514
+
+	column MachineId
+		dataType: string
+		lineageTag: 85e6fd36-e61c-4bee-ae5c-1023c9bbfa04
+		summarizeBy: none
+		sourceColumn: MachineId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductionLine
+		dataType: string
+		lineageTag: 828d3c37-72bc-46f8-bc3c-3f3c7dccdaec
+		summarizeBy: none
+		sourceColumn: ProductionLine
+
+		annotation SummarizationSetBy = Automatic
+
+	column SensorType
+		dataType: string
+		lineageTag: b895a5f4-93eb-4693-9a8d-6021ac13c449
+		summarizeBy: none
+		sourceColumn: SensorType
+
+		annotation SummarizationSetBy = Automatic
+
+	column SensorUnit
+		dataType: string
+		lineageTag: 999bbfa3-6381-4169-ad9b-a0aab3300675
+		summarizeBy: none
+		sourceColumn: SensorUnit
+
+		annotation SummarizationSetBy = Automatic
+
+	column WindowStartTime
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3d90dcf5-6976-4e7f-b616-b5b71b311a38
+		summarizeBy: none
+		sourceColumn: WindowStartTime
+
+		variation Variation
+			isDefault
+			relationship: 82ebe615-487e-4c0c-bcf5-32cbfea29055
+			defaultHierarchy: LocalDateTable_a96b4f9d-9e86-4de0-abbc-cd220edd07f7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReadingCount
+		dataType: int64
+		formatString: 0
+		lineageTag: 03d9d1ec-b513-468b-a069-40af102138e8
+		summarizeBy: sum
+		sourceColumn: ReadingCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column MinValue
+		dataType: double
+		lineageTag: 72b312c8-be75-4a8e-9b9d-b5a036e638df
+		summarizeBy: none
+		sourceColumn: MinValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AvgValue
+		dataType: double
+		lineageTag: 487a45d2-13c0-4aad-9cba-cf6eaa300c39
+		summarizeBy: sum
+		sourceColumn: AvgValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MaxValue
+		dataType: double
+		lineageTag: a6fbb787-320a-4261-96d7-2764ed982b5a
+		summarizeBy: sum
+		sourceColumn: MaxValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LowerThreshold
+		dataType: double
+		lineageTag: 91fe24de-dc20-4f8c-a5ac-5473e15ba978
+		summarizeBy: sum
+		sourceColumn: LowerThreshold
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UpperThreshold
+		dataType: double
+		lineageTag: 736f5614-5dfa-4f8f-932c-55d33f84733c
+		summarizeBy: sum
+		sourceColumn: UpperThreshold
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LowCount
+		dataType: int64
+		formatString: 0
+		lineageTag: 9380609a-361e-4c3a-a572-f8ec59124884
+		summarizeBy: sum
+		sourceColumn: LowCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column HighCount
+		dataType: int64
+		formatString: 0
+		lineageTag: 946048c9-19fa-452f-b8c4-f80a717e8da0
+		summarizeBy: sum
+		sourceColumn: HighCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column SourceAnomalyCount
+		dataType: int64
+		formatString: 0
+		lineageTag: 741f196a-f1ca-4f16-a878-32d2412c10c7
+		summarizeBy: sum
+		sourceColumn: SourceAnomalyCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column WindowEndTime
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a48cfad3-aa9a-4096-ad03-a103db16c7f6
+		summarizeBy: none
+		sourceColumn: WindowEndTime
+
+		variation Variation
+			isDefault
+			relationship: 36bea04e-6d33-4dd4-a031-786aa08b922d
+			defaultHierarchy: LocalDateTable_01c84e34-e333-404c-993b-3a819e279b25.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Trends = m
+		mode: import
+		source =
+				let
+				    FileContent = File.Contents("C:\Users\ACER\Downloads\Seminar_Cloud\trends.json"),
+				    Lines = Lines.FromBinary(FileContent),
+				    NonEmpty = List.Select(Lines, each Text.Trim(_) <> ""),
+				    Records = List.Transform(NonEmpty, each Json.Document(_)),
+				    Result = Table.FromRecords(Records),
+				    #"Changed Type" = Table.TransformColumnTypes(Result,{{"MachineId", type text}, {"ProductionLine", type text}, {"SensorType", type text}, {"SensorUnit", type text}, {"WindowStartTime", type datetimezone}, {"ReadingCount", Int64.Type}, {"MinValue", type number}, {"AvgValue", type number}, {"MaxValue", type number}, {"LowerThreshold", type number}, {"UpperThreshold", type number}, {"LowCount", Int64.Type}, {"HighCount", Int64.Type}, {"SourceAnomalyCount", Int64.Type}, {"WindowEndTime", type datetimezone}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
